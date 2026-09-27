@@ -3,8 +3,9 @@ import 'dart:io';
 String entrada = '';
 double nota = 0;
 double media = 0;
+int t = 0;
 void main() {
-  for (int t = 1; t <= 4; t++) {
+  while (t <= 4) {
     while (true) {
       print('Insira a $t° nota:');
       entrada = stdin.readLineSync()!;
@@ -23,6 +24,7 @@ void main() {
         continue;
       }
     }
+    t++;
   }
   media = nota / 4;
   print("Média do aluno: $media");
